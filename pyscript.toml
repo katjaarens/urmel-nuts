@@ -1,2 +1,11 @@
 [tool.pyscript]
 name = "urmel-und-nuts"
+
+name = "urmel-und-nuts"
+description = "Hunde-Datenbank Projekt"
+
+[terminal]
+adapter = "pyodide"
+
+# Hier könnten später externe Python-Packages stehen
+packages = []
