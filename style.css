@@ -122,3 +122,36 @@ button:active, .button:active {
     transform: translateY(1px) scale(0.95); /* Button drückt sich nach unten ein */
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+/* Animation für den kleinen Lautsprecher-Button */
+/* Wir sprechen ihn über seine Position an, da er ein div oder button ist */
+/* Um sicherzugehen, nenne ich die Klasse mal '.speaker-button' */
+/* Wenn du im HTML-Code dem div/button die Klasse 'speaker-button' gibst, ist das perfekt */
+
+.speaker-button {
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer;
+}
+
+/* Wackeln beim Drüberfahren mit der Maus */
+.speaker-button:hover {
+    animation: wobble 0.5s ease; /* Fügt eine Wackel-Animation hinzu */
+    transform: scale(1.1); /* Wird ein bisschen größer */
+    filter: brightness(1.1); /* Wird heller */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Schatten wird tiefer */
+}
+
+/* Klick-Effekt */
+.speaker-button:active {
+    transform: scale(0.95); /* Button drückt sich nach unten ein */
+}
+
+/* Definition der Wackel-Animation */
+@keyframes wobble {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-2px) rotate(-3deg); }
+    30% { transform: translateX(1.5px) rotate(2deg); }
+    45% { transform: translateX(-1px) rotate(-2deg); }
+    60% { transform: translateX(0.5px) rotate(1deg); }
+    75% { transform: translateX(-0.2px) rotate(-1deg); }
+    100% { transform: translateX(0); }
+}
